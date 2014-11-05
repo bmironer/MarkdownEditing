@@ -1668,7 +1668,7 @@
 		<key>fenced-js</key>
 		<dict>
 		    <key>begin</key>
-		    <string>^(\s*[`~]{3,})(js|json|javascript)\s*$</string>
+		    <string>^(\s*[`~]{3,})(js|javascript)\s*$</string>
 		    <key>end</key>
 		    <string>^(\1)\n</string>
 		    <key>name</key>
@@ -1678,6 +1678,22 @@
 		        <dict>
 		            <key>include</key>
 		            <string>source.js</string>
+		        </dict>
+		    </array>
+		</dict>
+		<key>fenced-json</key>
+		<dict>
+		    <key>begin</key>
+		    <string>^(\s*[`~]{3,})(json)\s*$</string>
+		    <key>end</key>
+		    <string>^(\1)\n</string>
+		    <key>name</key>
+		    <string>markup.raw.block.markdown markup.raw.block.fenced.markdown</string>
+		    <key>patterns</key>
+		    <array>
+		        <dict>
+		            <key>include</key>
+		            <string>source.json</string>
 		        </dict>
 		    </array>
 		</dict>
@@ -1817,6 +1833,10 @@
 				<dict>
 					<key>include</key>
 					<string>#fenced-js</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#fenced-json</string>
 				</dict>
 				<dict>
 					<key>include</key>
